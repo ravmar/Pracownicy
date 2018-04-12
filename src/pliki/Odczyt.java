@@ -9,13 +9,14 @@ public class Odczyt {
 	public static void main(String[] args) {
 
 		String sciezka = "C:/Users/kurs/Desktop/plik4.txt";
-		
+		int i=0;
 		File plik = new File(sciezka);
 		try (Scanner sc = new Scanner(plik)) {
 			
 			while(sc.hasNextLine()) {
 				String linia = sc.nextLine();
-				System.out.println(linia);
+				i++;
+				System.out.println("linia " + i +" " +linia);
 			}
 			
 		} catch (FileNotFoundException e) {

@@ -16,9 +16,13 @@ public class Pracownik {
 	private String adres;
 	private String miasto;
 	
-	private Pracownik(int id, String imie, String nazwisko, String stanowisko, LocalDate data, int pensja,
+	public Pracownik () {
+		
+	}
+	
+	public Pracownik(int id, String imie, String nazwisko, String stanowisko, LocalDate data, int pensja,
 			String telefon, String departament, String adres, String miasto) {
-		super();
+		
 		this.id = id;
 		this.imie = imie;
 		this.nazwisko = nazwisko;

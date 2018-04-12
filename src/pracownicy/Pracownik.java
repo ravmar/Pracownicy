@@ -17,7 +17,8 @@ public class Pracownik {
 	private String miasto;
 	
 	public Pracownik () {
-		
+		// jesli klasa posaida konstruktor domyslny, a dostep do pol odbywa sie przez gettery i settery
+		//to spelnia wymagania wzorca Java Bean
 	}
 	
 	public Pracownik(int id, String imie, String nazwisko, String stanowisko, LocalDate data, int pensja,

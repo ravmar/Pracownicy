@@ -3,6 +3,8 @@ package pracownicy;
 import java.math.BigDecimal;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class Podwyzka {
 
 	public static void main(String[] args) {
@@ -10,7 +12,8 @@ public class Podwyzka {
 		String wejscie = "pracownicy.csv";
 		String wyjscie = "podwyzka.csv";
 		BigDecimal zmiana = new BigDecimal("500.00");
-		
+//		double procent = Double.parseDouble(JOptionPane.showInputDialog("O ile procent podnieść?"));
+				
 		
 		List<Pracownik> lista = ObslugaCSV.odczytaj(wejscie);
 		

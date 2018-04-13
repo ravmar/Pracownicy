@@ -11,6 +11,8 @@ import java.util.Scanner;
 
 public class ObslugaCSV {
 	
+	private static final String SEPARATOR = ";";
+
 	public static List<Pracownik> odczytaj(String sciezka){
 		List<Pracownik> lista = new ArrayList<>(); 
 		
@@ -18,7 +20,7 @@ public class ObslugaCSV {
 		try(Scanner sc = new Scanner(plik)) {
 			while(sc.hasNextLine()) {
 				String linia = sc.nextLine();
-				String[] pola = linia.split(";");
+				String[] pola = linia.split(SEPARATOR);
 				
 				int id = Integer.parseInt(pola[0]);
 				LocalDate data = LocalDate.parse(pola[4]);
@@ -38,9 +40,9 @@ public class ObslugaCSV {
 		 try(PrintWriter out = new PrintWriter(sciezka)) {
 			 
 			 for (Pracownik pracownik : pracownicy) {
-				out.println(pracownik.getId()+";"+pracownik.getImie()+";"+pracownik.getNazwisko()+";"+pracownik.getStanowisko()
-							+";"+pracownik.getData()+";"+pracownik.getImie()+";"+pracownik.getPensja()+";"+pracownik.getTelefon()
-							+";"+pracownik.getDepartament()+";"+pracownik.getDepartament()+";"+pracownik.getAdres()+";"+pracownik.getMiasto());
+				out.println(pracownik.getId()+SEPARATOR+pracownik.getImie()+SEPARATOR+pracownik.getNazwisko()+SEPARATOR+pracownik.getStanowisko()
+							+SEPARATOR+pracownik.getData()+SEPARATOR+pracownik.getImie()+SEPARATOR+pracownik.getPensja()+SEPARATOR+pracownik.getTelefon()
+							+SEPARATOR+pracownik.getDepartament()+SEPARATOR+pracownik.getDepartament()+SEPARATOR+pracownik.getAdres()+SEPARATOR+pracownik.getMiasto());
 			}
 	   		 
 	   	 } catch (FileNotFoundException e) {

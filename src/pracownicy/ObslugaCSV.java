@@ -2,6 +2,7 @@ package pracownicy;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -34,7 +35,12 @@ public class ObslugaCSV {
 	}
 	
 	public static void zapisz(String sciezka, List<Pracownik> pracownicy) {
-		
+		 try(PrintWriter out = new PrintWriter(sciezka)) {
+	   		 
+	   	 } catch (FileNotFoundException e) {
+	   		 e.printStackTrace();
+	   	 }
+
 	}
 
 }

@@ -36,6 +36,12 @@ public class ObslugaCSV {
 	
 	public static void zapisz(String sciezka, List<Pracownik> pracownicy) {
 		 try(PrintWriter out = new PrintWriter(sciezka)) {
+			 
+			 for (Pracownik pracownik : pracownicy) {
+				out.println(pracownik.getId()+";"+pracownik.getImie()+";"+pracownik.getNazwisko()+";"+pracownik.getStanowisko()
+							+";"+pracownik.getData()+";"+pracownik.getImie()+";"+pracownik.getPensja()+";"+pracownik.getTelefon()
+							+";"+pracownik.getDepartament()+";"+pracownik.getDepartament()+";"+pracownik.getAdres()+";"+pracownik.getMiasto());
+			}
 	   		 
 	   	 } catch (FileNotFoundException e) {
 	   		 e.printStackTrace();

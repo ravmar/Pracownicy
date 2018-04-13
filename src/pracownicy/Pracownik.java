@@ -10,7 +10,7 @@ public class Pracownik {
 	private String nazwisko;
 	private String stanowisko;
 	private LocalDate data;
-	private int pensja;
+	private BigDecimal pensja;
 	private String telefon;
 	private String departament;
 	private String adres;
@@ -21,7 +21,7 @@ public class Pracownik {
 		//to spelnia wymagania wzorca Java Bean
 	}
 	
-	public Pracownik(int id, String imie, String nazwisko, String stanowisko, LocalDate data, int pensja,
+	public Pracownik(int id, String imie, String nazwisko, String stanowisko, LocalDate data, BigDecimal pensja,
 			String telefon, String departament, String adres, String miasto) {
 		
 		this.id = id;
@@ -97,13 +97,13 @@ public class Pracownik {
 
 
 
-	public int getPensja() {
+	public BigDecimal getPensja() {
 		return pensja;
 	}
 
 
 
-	public void setPensja(int pensja) {
+	public void setPensja(BigDecimal pensja) {
 		this.pensja = pensja;
 	}
 
@@ -175,7 +175,7 @@ public class Pracownik {
 		result = prime * result + ((imie == null) ? 0 : imie.hashCode());
 		result = prime * result + ((miasto == null) ? 0 : miasto.hashCode());
 		result = prime * result + ((nazwisko == null) ? 0 : nazwisko.hashCode());
-		result = prime * result + pensja;
+		result = prime * result + ((pensja == null) ? 0 : pensja.hashCode());
 		result = prime * result + ((stanowisko == null) ? 0 : stanowisko.hashCode());
 		result = prime * result + ((telefon == null) ? 0 : telefon.hashCode());
 		return result;
@@ -222,7 +222,10 @@ public class Pracownik {
 				return false;
 		} else if (!nazwisko.equals(other.nazwisko))
 			return false;
-		if (pensja != other.pensja)
+		if (pensja == null) {
+			if (other.pensja != null)
+				return false;
+		} else if (!pensja.equals(other.pensja))
 			return false;
 		if (stanowisko == null) {
 			if (other.stanowisko != null)
@@ -236,10 +239,7 @@ public class Pracownik {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
+
 	
 
 }

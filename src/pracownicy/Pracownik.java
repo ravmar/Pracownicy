@@ -3,6 +3,11 @@ package pracownicy;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * @author kurs
+ *
+ *Klasa modelu, ktorej obiekty reprezentuja pracownikow
+ */
 public class Pracownik {
 	
 	private int id;

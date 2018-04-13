@@ -32,5 +32,9 @@ public class ObslugaCSV {
 		
 		return lista;		
 	}
+	
+	public static void zapisz(String sciezka, List<Pracownik> pracownicy) {
+		
+	}
 
 }

@@ -159,9 +159,13 @@ public class Pracownik {
 
 	@Override
 	public String toString() {
-		return "Pracownik [id=" + id + ", imie=" + imie + ", nazwisko=" + nazwisko + ", stanowisko=" + stanowisko
+		return imie + " " + nazwisko + " (id=" +id +", stanowisko=" + stanowisko
 				+ ", data=" + data + ", pensja=" + pensja + ", telefon=" + telefon + ", departament=" + departament
-				+ ", adres=" + adres + ", miasto=" + miasto + "]";
+				+ ", adres=" + adres + ", miasto=" + miasto +")"; 
+		
+//		return "Pracownik [id=" + id + ", imie=" + imie + ", nazwisko=" + nazwisko + ", stanowisko=" + stanowisko
+//				+ ", data=" + data + ", pensja=" + pensja + ", telefon=" + telefon + ", departament=" + departament
+//				+ ", adres=" + adres + ", miasto=" + miasto + "]";
 	}
 
 	@Override
